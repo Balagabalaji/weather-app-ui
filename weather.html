@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><!--to define structure of web page-->
+    <head><!--to stroe document info-->
+         <meta charset="utf-8"> 
+         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+         <title>weather</title>
+         <link rel="stylesheet" href="weather.css" >
+         <link rel="icon" type="image/x-icon"  href="images/weather.png">
+    </head>
+    <body>
+      <div class="weather">
+        <div class="inputbutton">
+            <input type="text" class="input" placeholder="Enter City Name">
+            <button class="button" id="button" title="click"><img rel="icon" src="images/search-icon-30.png" alt="searchicon"></button>
+        </div>
+        
+            <img  rel="icon" src="images/weather-forecast-96.png" class="weathericon">
+            <h1 id="temperature">°C</h1>
+            <h2 id="cityname">CityName</h2>
+        
+        <div class="humiditywind">
+            <div class="h1">
+                <img rel="icon" src="images/humidity-50.png">
+                <div class="humidity">
+                <p class="hm">%</p>    
+                <p class="hm">humidity</p>
+            </div></div>
+            <div class="w1">
+                <img rel="icon" src="images/wind-48.png">
+           <div class="wind">
+                <p class="ws">km/h</span>
+                <p class="ws">wind speed</p>
+                </div>
+            </div>
+        </div>
+      </div>
+      <script src="script.js">
+        
+      </script>
+
+    </body>
+
+</html>
