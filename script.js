@@ -10,6 +10,9 @@ const humidity = document.querySelectorAll('.hm')[0];
 const windspeed = document.querySelectorAll('.ws')[0];
 const weathericon = document.querySelector('.weathericon');
 const toast = document.getElementById('toast');
+window.onload = function() {
+    alert("🔔 Note: This Weather App supports only city names. Please enter a valid city name.");
+};
 
 const apiurl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
 const apikey = "44ade95c1c42c8d86639740e961831fc";
@@ -77,3 +80,4 @@ button.addEventListener('click', async function() {
         showToast("Something went wrong!");
     }
 });
+
