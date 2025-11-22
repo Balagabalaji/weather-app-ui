@@ -24,3 +24,5 @@ CSS – Styling and layout (responsive design)
 JavaScript – API integration and dynamic content update
 
 OpenWeatherMap API – Real-time weather data
+
+<img width="914" height="759" alt="Screenshot 2025-10-25 003113" src="https://github.com/user-attachments/assets/d41870fa-0381-4413-ae83-599b7ce3143d" />
