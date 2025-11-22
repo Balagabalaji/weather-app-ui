@@ -30,7 +30,7 @@ function showToast(message) {
     }, 2000);
 }
 
-// click buttton
+// click button
 button.addEventListener('click', async function() {
     const cityVal = cityInput.value.trim();
 
@@ -43,33 +43,31 @@ button.addEventListener('click', async function() {
         const data = await weatherCheck(cityVal);
 
         if (data.cod === 200 && cityVal.toLowerCase() === data.name.toLowerCase()) {
-            // Updating  weather information........
+            // Updating weather information...
             temperature.textContent = Math.round(data.main.temp) + "°C";
             cityname.textContent = data.name;
             humidity.textContent = data.main.humidity + "%";
             windspeed.textContent = data.wind.speed + " km/h";
 
-            // Updating  icon according weather conditions
+            // Updating icon according to weather conditions
             switch(data.weather[0].main) {
-                  case 'Rain':
-                    weathericon.src = 'images/rain.png'; break;
-              case 'Clear':
-             weathericon.src = 'images/clear.png'; break;
+                case 'Rain':
+                    weathericon.src = 'assets/rain.png'; break;
+                case 'Clear':
+                    weathericon.src = 'assets/clear.png'; break;
                 case 'Mist':
-                    weathericon.src = 'images/mist.png'; break;
-           case 'Clouds':
-                    weathericon.src = 'images/clouds.png'; break;
-                
-                
-            case 'Snow':
-                    weathericon.src = 'images/snow-96.png'; break;
+                    weathericon.src = 'assets/mist.png'; break;
+                case 'Clouds':
+                    weathericon.src = 'assets/clouds.png'; break;
+                case 'Snow':
+                    weathericon.src = 'assets/snow-96.png'; break;
                 case 'Drizzle':
-                    weathericon.src = 'images/drizzle.png'; break;
+                    weathericon.src = 'assets/drizzle.png'; break;
                 default:
-                    weathericon.src = 'images/weather.png';
+                    weathericon.src = 'assets/weather-forecast-96.png';
             }
 
-            cityInput.value = ""; // Clearing the  input value
+            cityInput.value = ""; // Clearing input value
         } else {
             showToast("Invalid city name");
             cityInput.value = '';
@@ -79,9 +77,3 @@ button.addEventListener('click', async function() {
         showToast("Something went wrong!");
     }
 });
-
-
-
- 
-
- 
